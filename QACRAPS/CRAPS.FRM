@@ -285,8 +285,8 @@ Option Explicit
 Dim m001A As Integer
 Dim m001C As Integer
 Dim m001E As Integer
-Const mc0032 = 32 ' ? &H 0020 00CC
-Const mc003C =-1 ' &HFFFF%
+Const mc0032 = 13369376 ' ? &H 0020 00CC
+Const mc003C = -1' &HFFFF%
 Const mc004E = 3 ' &H3%
 Const m0050 = 0 ' &H0%
 Const m0052 = 0 ' &H0%
@@ -298,7 +298,7 @@ Const mc0098 = 33 ' &H21%
 Const mc009C = 4 ' &H4%
 Const mc00A4 = 32 ' &H20%
 Const mc00E6 = 1 ' &H1%
-Const mc00EA =-1 ' &HFFFF%
+Const mc00EA = -1' &HFFFF%
 Const mc00F2 = 8 ' &H8%
 Const mc00F6 = 4 ' &H4%
 Const m0116 = 0 ' &H0%
@@ -315,69 +315,10 @@ Const mc01F0 = 6 ' &H6%
 Const mc01F2 = 7 ' &H7%
 Const mc01F4 = 3 ' &H3%
 Const mc01F6 = 9 ' &H9%
-Const m020A = 8388608& ' &H800000&
-
-Sub sub0AB4 ()
-Dim l0020
-Dim l0024 As T1A21
-' Const mc0032 = 32 ' ? &H 0020 00CC
-Static m003A As Integer
-' Const mc003C =-1 ' &HFFFF%
-sub045E l0024
-gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-sub0472 l0024
-gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-sub04CC m003A, l0024
-gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-sub04CC mc003C, l0024
-gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-sub04E4 l0024
-gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-For l0020 = 4 To 10
-    If  l0020 <> 7 Then
-        sub048A l0020, m003A, l0024
-        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-    End If
-Next
-For l0020 = 4 To 10
-    If  l0020 <> 7 Then
-        sub048A l0020, mc003C, l0024
-        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-    End If
-Next
-For l0020 = 4 To 10
-    If  l0020 <> 7 Then
-        sub049F l0020, m003A, l0024
-        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-    End If
-Next
-For l0020 = 4 To 10
-    If  l0020 <> 7 Then
-        sub049F l0020, mc003C, l0024
-        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-    End If
-Next
-sub04B8 m003A, l0024
-gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-sub04B8 mc003C, l0024
-gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-For l0020 = 4 To 10
-    If  l0020 <> 7 Then
-        sub0449 l0020, l0024
-        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-    End If
-Next
-For l0020 = 1 To 15
-    sub0428 l0020, l0024
-    gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
-Next
-End Sub
-
-Sub ChipBox_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single)
-End Sub
+Const m020A = 8388608  ' &H800000&
 
 Sub ChipBox_Paint ()
-If  gv042A Then Exit Sub
+If gv042A Then Exit Sub
 sub09F3
 End Sub
 
@@ -390,18 +331,18 @@ Sub Form_KeyDown (KeyCode As Integer, Shift As Integer)
 ' Const mc005E = 1 ' &H1%
 Static m0064 As Integer
 ' Const m006A = 0 ' &H0%
-If  m001A Then Exit Sub
+If m001A Then Exit Sub
 m001A = True
 Select Case KeyCode
     Case 82
         sub051E
     Case 83
-        If  gv025E Then
+        If gv025E Then
             sub0171 mc004E, m0050
             gv025E = False
             sub041B m0052
         Else
-            If  gv0240(mc004E) <> mc005A Then
+            If gv0240(mc004E) <> mc005A Then
                 sub0171 mc004E, mc005C
                 gv025E = True
                 sub041B mc005E
@@ -427,7 +368,7 @@ m001A = False
 End Sub
 
 Sub Form_Load ()
-Dim l0070
+Dim l0070 As Integer
 Dim l0072 As Integer
 Dim l0076 As Integer
 Dim l007A As Integer
@@ -454,17 +395,17 @@ gv042A = True
 gv0270 = fn009F()
 gv03DC = fn0820()
 l0072 = ((megabox.Height + ChipBox.Height) + (2 * extfn0200(mc0098)) + extfn0200(mc009C)) * Screen.TwipsPerPixelY
-If  Screen.Height \ Screen.TwipsPerPixelY <= 480 Then l0072 = 480 * Screen.TwipsPerPixelY
+If Screen.Height \ Screen.TwipsPerPixelY <= 480 Then l0072 = 480 * Screen.TwipsPerPixelY
 Height = l0072
 l0076 = (megabox.Width + (2 * extfn0200(mc00A4))) * Screen.TwipsPerPixelX
-If  Screen.Width \ Screen.TwipsPerPixelX <= 640 Then l0076 = 640 * Screen.TwipsPerPixelX
+If Screen.Width \ Screen.TwipsPerPixelX <= 640 Then l0076 = 640 * Screen.TwipsPerPixelX
 Width = l0076
-If  Screen.Height = 480 * Screen.TwipsPerPixelY Then
+If Screen.Height = 480 * Screen.TwipsPerPixelY Then
     Top = 0
 Else
     Top = fn0164((Screen.Height \ 2 - craps.Height \ 2), 0, Screen.Height - extfn0200(mc009C))
 End If
-If  Screen.Width = 640 * Screen.TwipsPerPixelX Then
+If Screen.Width = 640 * Screen.TwipsPerPixelX Then
     Left = 0
 Else
     Left = fn0164((Screen.Width \ 2 - craps.Width \ 2), 0, Screen.Width - 30 * Screen.TwipsPerPixelX)
@@ -502,7 +443,7 @@ tmrSnippet.Interval = 1000 * 11
 For l0070 = 0 To 2
     gv059A(l0070) = 0
 Next
-If  Not fn010C() Then
+If Not fn010C() Then
     megabox.MousePointer = 10
     sub094A 32023, mc00E6
 End If
@@ -510,17 +451,17 @@ gv019E = 5000
 sub0686 mc00EA
 sub09F3
 sub053B
-If  fn011E() Then
+If fn011E() Then
     App.HelpFile = gv0270 + "CRAPS.HLP"
 Else
     sub0171 mc00F2, mc005A
     App.HelpFile = ""
 End If
 sub041B 1
-If  gv025E Then sub0171 mc004E, mc005C
+If gv025E Then sub0171 mc004E, mc005C
 sub01ED 1
 gv025C = -1
-If  gv025C Then sub0171 mc00F6, mc005C
+If gv025C Then sub0171 mc00F6, mc005C
 gv0362 = 0
 Settings.imgHand.Top = Settings.lblDiceSize(gv0362).Top + 2
 Settings.imgDice = Settings.imgDP(gv0362)
@@ -548,23 +489,23 @@ Static m010E As Integer
 ' Const m0116 = 0 ' &H0%
 Select Case WindowState
 Case 0, 2
-    If  m010C = 1 Then
-        If  m010E Then sub041B mc005E
+    If m010C = 1 Then
+        If m010E Then sub041B mc005E
     End If
     megabox.Move craps.ScaleWidth \ 2 - megabox.Width \ 2, craps.ScaleHeight \ 2 - (megabox.Height + ChipBox.ScaleHeight) \ 2
     ChipBox.Move megabox.Left, megabox.Top + megabox.Height
     gv035C = m0116
 Case 1
     m010E = gv025E
-    If  gv0590 = False Then sub041B m0052
+    If gv0590 = False Then sub041B m0052
 End Select
-If  gv014A(0) Then sub084C 0, gv03E0(0)
-If  gv014A(1) Then sub084C 1, gv03E0(1)
+If gv014A(0) Then sub084C 0, gv03E0(0)
+If gv014A(1) Then sub084C 1, gv03E0(1)
 Caption = "Quantum Axcess Craps"
 m010C = WindowState
-If  WindowState <> 1 Then
-    If  (Pad.Left + 30) > ScaleWidth Then Pad.Left = ScaleWidth - 50
-    If  Pad.Top + 30 > ScaleHeight Then Pad.Top = fn0149(0, ScaleHeight - 50)
+If WindowState <> 1 Then
+    If (Pad.Left + 30) > ScaleWidth Then Pad.Left = ScaleWidth - 50
+    If Pad.Top + 30 > ScaleHeight Then Pad.Top = fn0149(0, ScaleHeight - 50)
 End If
 End Sub
 
@@ -573,18 +514,18 @@ Dim l0140 As Integer
 ' Const mc0144 = 2 ' &H2%
 Screen.MousePointer = 11
 l0140 = extfn03EE(craps.hWnd, gv0270 + "craps.hlp", mc0144, ByVal CLng(0))
-If  fn010C() Then l0140 = extfn03DB(1)
+If fn010C() Then l0140 = extfn03DB(1)
 Unload setbet
 Unload stats
 Unload Settings
 Screen.MousePointer = 0
-If  extfn0231(extfn02F4("cuscur")) Then extsub0408 megabox.hWnd
+If extfn0231(extfn02F4("cuscur")) Then extsub0408 megabox.hWnd
 End
 End Sub
 
 Sub imgCome_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single)
 ' Const mc0156 = 1 ' &H1%
-If  Button = 1 Then
+If Button = 1 Then
     sub06C1 m006A
 Else
     sub06C1 mc0156
@@ -592,7 +533,7 @@ End If
 End Sub
 
 Sub imgDontCome_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single)
-If  Button = 1 Then
+If Button = 1 Then
     sub06E3 m006A
 Else
     sub06E3 mc0156
@@ -602,7 +543,7 @@ End Sub
 Sub imgDontPass_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single)
 X = imgDontPass.Left
 Y = imgDontPass.Top
-If  Button = 1 Then
+If Button = 1 Then
     sub090E X, Y, m006A
 Else
     sub090E X, Y, mc0156
@@ -610,7 +551,7 @@ End If
 End Sub
 
 Sub imgField_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single)
-If  Button = 1 Then
+If Button = 1 Then
     sub06F6 m006A
 Else
     sub06F6 mc0156
@@ -618,7 +559,7 @@ End If
 End Sub
 
 Sub imgMCome_MouseDown (Index%, Button As Integer, Shift As Integer, X As Single, Y As Single)
-If  Button = 1 Then
+If Button = 1 Then
     sub0730 Index, m006A
 Else
     sub0730 Index, mc0156
@@ -628,7 +569,7 @@ End Sub
 Sub imgMDontCome_MouseDown (Index%, Button As Integer, Shift As Integer, X As Single, Y As Single)
 X = imgMDontCome(Index).Left
 Y = imgMDontCome(Index).Top
-If  Button = 1 Then
+If Button = 1 Then
     sub090E X, Y, m006A
 Else
     sub090E X, Y, mc0156
@@ -638,15 +579,15 @@ End Sub
 Sub imgPass_MouseDown (Index%, Button As Integer, Shift As Integer, X As Single, Y As Single)
 Static m019A As Integer
 ' Const mc019C = 1 ' &H1%
-If  Index = m019A Then
-    If  Button = 1 Then
+If Index = m019A Then
+    If Button = 1 Then
         sub06B2 m006A
     Else
         sub06B2 mc0156
     End If
 End If
-If  Index = mc019C Then
-    If  Button = 1 Then
+If Index = mc019C Then
+    If Button = 1 Then
         sub0706 m006A
     Else
         sub0706 mc0156
@@ -655,7 +596,7 @@ End If
 End Sub
 
 Sub imgPlace_MouseDown (Index%, Button As Integer, Shift As Integer, X As Single, Y As Single)
-If  Button = 1 Then
+If Button = 1 Then
     sub0929 Index, m006A, Shift
 Else
     sub0929 Index, mc0156, Shift
@@ -663,7 +604,7 @@ End If
 End Sub
 
 Sub imgProp_MouseDown (Index%, Button As Integer, Shift As Integer, X As Single, Y As Single)
-If  Button = 2 Then
+If Button = 2 Then
     sub091A Index, mc0156
 Else
     sub091A Index, m006A
@@ -671,7 +612,7 @@ End If
 End Sub
 
 Sub megabox_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single)
-If  Button = 1 Then
+If Button = 1 Then
     sub090E X, Y, m006A
 Else
     sub090E X, Y, mc0156
@@ -680,13 +621,13 @@ End Sub
 
 Sub megabox_MouseMove (Button As Integer, Shift As Integer, X As Single, Y As Single)
 ' Const mc01C2 = 1 ' &H1%
-If  craps.ScaleWidth > 780 Then Exit Sub
-If  X > craps.ScaleWidth - 20 And gv035C = m0116 Then
+If craps.ScaleWidth > 780 Then Exit Sub
+If X > craps.ScaleWidth - 20 And gv035C = m0116 Then
    megabox.Left = (0 - Abs(megabox.ScaleWidth - craps.ScaleWidth))
    gv035C = mc01C2
    Exit Sub
 End If
-If  X < Abs(megabox.Left) + 18 And gv035C = mc01C2 Then
+If X < Abs(megabox.Left) + 18 And gv035C = mc01C2 Then
     megabox.Left = 0
     gv035C = m0116
     Exit Sub
@@ -703,36 +644,36 @@ Sub Pad_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single
 ' Const mc01CC = 161 ' &HA1%
 ' Const mc01CE = 2 ' &H2%
 Static m01D2 As Integer
-If  Y <= 8 Then
+If Y <= 8 Then
     extsub032B
     gv0260 = extfn031C(Pad.hWnd, mc01CC, mc01CE, 0)
     Exit Sub
 End If
-If  X < 71 Then
+If X < 71 Then
     m01D2 = (Y - 9) \ 22
 Else
     m01D2 = (Y - 9) \ 22 + 5
 End If
-If  (m01D2 = 3 Or m01D2 = 4) And gv0240(m01D2) <> mc005A Then
+If (m01D2 = 3 Or m01D2 = 4) And gv0240(m01D2) <> mc005A Then
     sub01A1 m01D2
 Else
-    If  gv0240(m01D2) <> mc005A Then sub0171 m01D2, mc005C
+    If gv0240(m01D2) <> mc005A Then sub0171 m01D2, mc005C
 End If
 End Sub
 
 Sub Pad_MouseMove (Button As Integer, Shift As Integer, X As Single, Y As Single)
-Static m01DC
-If  Button = 0 Then Exit Sub
+Static m01DC As Integer
+If Button = 0 Then Exit Sub
 For m01DC = 0 To 9
-    If  m01DC = 3 Then m01DC = 5
-    If  gv0240(m01DC) = mc005C Then
-        If  X < gv0216(m01DC).M1612 Or X > gv0216(m01DC).M1612 + 71 Or Y < gv0216(m01DC).M1617 Or Y > gv0216(m01DC).M1617 + 22 Then sub0171 m01DC, m0050
+    If m01DC = 3 Then m01DC = 5
+    If gv0240(m01DC) = mc005C Then
+        If X < gv0216(m01DC).M1612 Or X > gv0216(m01DC).M1612 + 71 Or Y < gv0216(m01DC).M1617 Or Y > gv0216(m01DC).M1617 + 22 Then sub0171 m01DC, m0050
     End If
 Next
 End Sub
 
 Sub Pad_MouseUp (Button As Integer, Shift As Integer, X As Single, Y As Single)
-Dim l01E6
+Dim l01E6 As Integer
 Static m01E8 As Integer
 ' Const mc01EA = 1 ' &H1%
 ' Const mc01EC = 2 ' &H2%
@@ -742,8 +683,8 @@ Static m01E8 As Integer
 ' Const mc01F4 = 3 ' &H3%
 ' Const mc01F6 = 9 ' &H9%
 For l01E6 = 0 To 9
-    If  gv0240(l01E6) = mc005C Then
-        If  l01E6 <> 3 And l01E6 <> 4 Then sub0171 l01E6, m0050
+    If gv0240(l01E6) = mc005C Then
+        If l01E6 <> 3 And l01E6 <> 4 Then sub0171 l01E6, m0050
             Select Case l01E6
                 Case m01E8
                     sub051E
@@ -771,10 +712,10 @@ Dim l0204 As Integer
 Dim l0206 As Integer
 Dim l0208 As Integer
 ' Const m020A = 8388608& ' &H800000&
-If  m01F8 = 0 Then
+If m01F8 = 0 Then
     On Error Resume Next
     l01FC = fn00FE("colors", "ActiveTitle")
-    If  Len(l01FC) Then
+    If Len(l01FC) Then
         l0206 = InStr(l01FC, " ")
         l0208 = InStr(l0206 + 1, l01FC, " ")
         l0200 = Val(Left$(l01FC, l0206 - 1))
@@ -784,13 +725,69 @@ If  m01F8 = 0 Then
     Else
         m01F8 = m020A
     End If
-    If  Err Then
+    If Err Then
         m01F8 = m020A
         Err = 0
     End If
 End If
 Pad.Line (0, 0)-(ScaleWidth, 8), m01F8, BF
 sub0191
+End Sub
+
+Sub sub0AB4 ()
+Dim l0020 As Integer
+Dim l0024 As T1A21
+' Const mc0032 = 32 ' ? &H 0020 00CC
+Static m003A As Integer
+' Const mc003C =-1 ' &HFFFF%
+sub045E l0024
+gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+sub0472 l0024
+gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+sub04CC m003A, l0024
+gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+sub04CC mc003C, l0024
+gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+sub04E4 l0024
+gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+For l0020 = 4 To 10
+    If l0020 <> 7 Then
+        sub048A l0020, m003A, l0024
+        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+    End If
+Next
+For l0020 = 4 To 10
+    If l0020 <> 7 Then
+        sub048A l0020, mc003C, l0024
+        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+    End If
+Next
+For l0020 = 4 To 10
+    If l0020 <> 7 Then
+        sub049F l0020, m003A, l0024
+        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+    End If
+Next
+For l0020 = 4 To 10
+    If l0020 <> 7 Then
+        sub049F l0020, mc003C, l0024
+        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+    End If
+Next
+sub04B8 m003A, l0024
+gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+sub04B8 mc003C, l0024
+gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+For l0020 = 4 To 10
+    If l0020 <> 7 Then
+        sub0449 l0020, l0024
+        gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+    End If
+Next
+For l0020 = 1 To 15
+    sub0428 l0020, l0024
+    gv0260 = extfn02DC(cache.hDC, 0, l0024.M1A46 * 16, 35, 16, megabox.hDC, l0024.M1A2E, l0024.M1A34, mc0032)
+Next
 End Sub
 
 Sub tmrCallBack_Timer ()
@@ -800,3 +797,4 @@ End Sub
 Sub tmrSnippet_Timer ()
 sub09B7
 End Sub
+

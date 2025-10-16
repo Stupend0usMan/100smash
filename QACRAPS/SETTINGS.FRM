@@ -313,11 +313,8 @@ Width = (m001C(0).M1A0E + 18) * Screen.TwipsPerPixelX
 cmdClose.Top = m001C(3).M1A14 + 12
 cmdClose.Left = cmdStats.Left
 Height = (cmdClose.Top + cmdClose.Height + 10 + extfn0200(mc0096)) * Screen.TwipsPerPixelY
-Settings.Top = fn0164((Screen.Height * .85#) / 2 - Settings.Height / 2, 0, Screen.Height - Settings.Height)
+Settings.Top = fn0164((Screen.Height * .85) / 2 - Settings.Height / 2, 0, Screen.Height - Settings.Height)
 Settings.Left = fn0164(Screen.Width / 2 - Settings.Width / 2, 0, Screen.Width - Settings.Width)
-End Sub
-
-Sub Form_MouseMove (Button As Integer, Shift As Integer, X As Single, Y As Single)
 End Sub
 
 Sub Form_Paint ()
@@ -329,7 +326,7 @@ sub01BC Settings
 End Sub
 
 Sub Form_QueryUnload (Cancel As Integer, UnloadMode As Integer)
-If  UnloadMode = 0 Then
+If UnloadMode = 0 Then
     Settings.Hide
     Cancel = True
 End If
@@ -354,3 +351,4 @@ End Sub
 Sub optMaxOdds_Click (Index%)
 sub01ED Index
 End Sub
+

@@ -1,9 +1,9 @@
 CRAPS.FRM
-main.txt
-Module1.BAS
-Module2.BAS
-Module3.BAS
-Module4.BAS
+MAIN.TXT
+MODULE1.BAS
+MODULE2.BAS
+MODULE3.BAS
+MODULE4.BAS
 SETBET.FRM
 SETODDS.FRM
 STATS.FRM
@@ -12,6 +12,9 @@ SETTINGS.FRM
 ABOUT.FRM
 FRMMENU.FRM
 SPLASH.FRM
-ProjWinSize=152,402,248,215
+ProjWinSize=91,128,356,432
+ProjWinShow=2
+IconForm="craps"
 Title="CRAPS"
-ExeName="craps.exe"
+ExeName="CRAPS.EXE"
+Path="C:\VB"

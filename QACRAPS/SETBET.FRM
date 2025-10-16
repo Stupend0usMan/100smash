@@ -286,8 +286,8 @@ Dim m001E(3) As T19F5
 Const mc0060 = 1 ' &H1%
 Const mc0082 = 9 ' &H9%
 Const mc00C8 = 4 ' &H4%
-Const mc0100 = 16777215& ' &HFFFFFF&
-Const mc0104 = 8421504& ' &H808080&
+Const mc0100 = 16777215  ' &HFFFFFF&
+Const mc0104 = 8421504  ' &H808080&
 
 Sub acrosscmd_Click ()
 pbet(4) = "5": pbet(5) = "5": pbet(6) = "6"
@@ -296,9 +296,9 @@ End Sub
 
 Sub AutoBox_MouseDown (Button As Integer, Shift As Integer, X As Single, Y As Single)
 Dim l0042 As Integer
-If  X < 3 Or X > 27 Or Y < 3 Or Y > 113 Then Exit Sub
+If X < 3 Or X > 27 Or Y < 3 Or Y > 113 Then Exit Sub
 l0042 = (Y - 3) \ 21
-If  gv0164(l0042) = 0 Then
+If gv0164(l0042) = 0 Then
     gv0164(l0042) = 1
 Else
     gv0164(l0042) = 0
@@ -312,7 +312,7 @@ Bet(Index).SelLength = Len(Bet(Index))
 End Sub
 
 Sub Bet_KeyPress (Index%, KeyAscii As Integer)
-If  (KeyAscii < 48 Or KeyAscii > 57) And KeyAscii <> 8 Then KeyAscii = 0
+If (KeyAscii < 48 Or KeyAscii > 57) And KeyAscii <> 8 Then KeyAscii = 0
 End Sub
 
 Sub Bet_LostFocus (Index%)
@@ -325,7 +325,7 @@ gv0260 = extfn03EE(craps.hWnd, gv0270 + "craps.hlp", mc0060, ByVal (CLng(7)))
 End Sub
 
 Sub Form_Load ()
-Dim l006A
+Dim l006A As Integer
 Dim l006C As Integer
 Dim l006E As Integer
 Dim l0070 As Integer
@@ -339,10 +339,10 @@ For l006A = 2 To 6
     Bet(l006A).TabIndex = l006A
 Next
 For l006A = 5 To 10
-    If  l006A <> 7 Then
+    If l006A <> 7 Then
         Load pbet(l006A)
         pbet(l006A).Visible = True
-        If  l006A < 7 Then
+        If l006A < 7 Then
             pbet(l006A).TabIndex = pbet(4).TabIndex + l006A - 4
         Else
             pbet(l006A).TabIndex = pbet(4).TabIndex + l006A - 5
@@ -361,7 +361,7 @@ For l006A = 1 To 6
     Bet(l006A).FontSize = mc0082
 Next
 For l006A = 4 To 10
-    If  l006A <> 7 Then
+    If l006A <> 7 Then
         pbet(l006A).FontName = setbet.FontName
         pbet(l006A).FontBold = False
         pbet(l006A).FontSize = mc0082
@@ -396,8 +396,8 @@ mainx2.Move Bet(1).Left + Bet(1).Width + 8, Bet(1).Top
 maind2.Move mainx2.Left, mainx2.Top + mainx2.Height + 4
 mainSet.Move maind2.Left, maind2.Top + maind2.Height + 4
 For l006A = 4 To 10
-    If  l006A <> 7 Then
-        If  l006A < 7 Then
+    If l006A <> 7 Then
+        If l006A < 7 Then
             pbet(l006A).Move (l006A - 4) * (pbet(l006A).Width + 4) + 13, 9 * m001A
         Else
             pbet(l006A).Move (l006A - 5) * (pbet(l006A).Width + 4) + 13, 9 * m001A
@@ -433,8 +433,8 @@ For l006A = 1 To 6
     Bet(l006A) = 5
 Next
 For l006A = 4 To 10
-  If  l006A <> 7 Then
-    If  l006A = 6 Or l006A = 8 Then
+  If l006A <> 7 Then
+    If l006A = 6 Or l006A = 8 Then
         pbet(l006A) = 6
     Else
         pbet(l006A) = 5
@@ -451,7 +451,7 @@ End Sub
 
 Sub Form_Paint ()
 Dim l00F0 As Integer
-Dim l00F2
+Dim l00F2 As Integer
 ' Const mc0100 = 16777215& ' &HFFFFFF&
 ' Const mc0104 = 8421504& ' &H808080&
 FontSize = mc0082
@@ -489,7 +489,7 @@ m001E(1).M1A08 = CurrentY
 m001E(1).M1A1A = "Place Bets"
 CurrentY = 10 * m001A
 For l00F2 = 4 To 10
-    If  l00F2 <> 7 Then
+    If l00F2 <> 7 Then
         CurrentX = pbet(l00F2).Left + (pbet(l00F2).Width \ 2) - (TextWidth(Str$(l00F2)) \ 2)
         Print Str$(l00F2);
     End If
@@ -542,13 +542,13 @@ For l00F2 = 1 To 6
     sub01CC setbet, Bet(l00F2)
 Next
 For l00F2 = 4 To 10
-    If  l00F2 <> 7 Then sub01CC setbet, pbet(l00F2)
+    If l00F2 <> 7 Then sub01CC setbet, pbet(l00F2)
 Next
 sub01BC setbet
 End Sub
 
 Sub Form_QueryUnload (Cancel As Integer, UnloadMode As Integer)
-If  UnloadMode = 0 Then
+If UnloadMode = 0 Then
     setbet.Hide
     Cancel = True
 End If
@@ -567,7 +567,7 @@ End Sub
 
 Sub mainSet_Click ()
 Dim l0116
-If  mainSet.Tag = "" Then mainSet.Tag = "1"
+If mainSet.Tag = "" Then mainSet.Tag = "1"
 For l0116 = 1 To 6
     Bet(l0116) = mainSet.Tag
 Next
@@ -590,7 +590,7 @@ pbet(Index).SelLength = Len(pbet(Index))
 End Sub
 
 Sub pbet_KeyPress (Index%, KeyAscii As Integer)
-If  (KeyAscii < 48 Or KeyAscii > 57) And KeyAscii <> 8 Then KeyAscii = 0
+If (KeyAscii < 48 Or KeyAscii > 57) And KeyAscii <> 8 Then KeyAscii = 0
 End Sub
 
 Sub pbet_LostFocus (Index%)
@@ -600,13 +600,14 @@ End Sub
 Sub PlaceD2_Click ()
 Dim l0126
 For l0126 = 4 To 10
-     If  l0126 <> 7 Then pbet(l0126) = Trim$(Str$(fn0149(Val(pbet(l0126)) \ 2, 1)))
+     If l0126 <> 7 Then pbet(l0126) = Trim$(Str$(fn0149(Val(pbet(l0126)) \ 2, 1)))
 Next
 End Sub
 
 Sub PlaceX2_Click ()
 Dim l0128
 For l0128 = 4 To 10
-    If  l0128 <> 7 Then pbet(l0128) = Trim$(Str$(fn0157(Val(pbet(l0128)) * 2, gv01A6)))
+    If l0128 <> 7 Then pbet(l0128) = Trim$(Str$(fn0157(Val(pbet(l0128)) * 2, gv01A6)))
 Next
 End Sub
+

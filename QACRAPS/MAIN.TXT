@@ -27,17 +27,17 @@ Global Const gc006A = 14 ' &HE%
 Global Const gc006C = 15 ' &HF%
 Global Const gc006E = 15 ' &HF%
 Global gv0070(1 To 15) As Long
-Global gv0086
-Global gv008A
-Global gv008E
-Global gv0092
+Global gv0086 As Long
+Global gv008A As Long
+Global gv008E As Long
+Global gv0092 As Long
 Global gv0096(4 To 10) As Long
 Global gv00AC(4 To 10) As Long
 Global gv00C2(4 To 10) As Long
 Global gv00D8(4 To 10) As Long
-Global gv00EE
-Global gv00F2
-Global gv00F6
+Global gv00EE As Long
+Global gv00F2 As Long
+Global gv00F6 As Long
 Global gv00FA(4 To 10) As Long
 Global gv0110(4 To 10) As Long
 Global gv0126 As Integer
@@ -60,7 +60,7 @@ Global gv01A6 As Long
 Global gv01AA As Integer
 Global Const gc01AC = 1 ' &H1%
 Global gv01BE As Integer
-Global Const gc01C0 =-1 ' &HFFFF%
+Global Const gc01C0 = -1' &HFFFF%
 Global gv01D4(2 To 12) As Long
 Global gv01EA As Long
 Global gv01EE As Long
@@ -158,3 +158,4 @@ Global gv0568(1) As Integer
 Global gv0590 As Integer
 Global gv059A(2) As Integer
 Global gv05B6(11) As Integer
+
