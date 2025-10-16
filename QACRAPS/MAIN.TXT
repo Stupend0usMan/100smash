@@ -1,0 +1,160 @@
+' main.txt - global definitions
+Global Const gc0008 = 32 ' &H20%
+Global Const gc000C = 4 ' &H4%
+Global Const gc0012 = 15 ' &HF%
+Global gv0018 As Integer
+Type T116E
+  M1176 As Integer
+  M117E As Integer
+  M1185 As Integer
+  M118E As Integer
+End Type
+
+Global Const gc0050 = 1 ' &H1%
+Global Const gc0052 = 2 ' &H2%
+Global Const gc0054 = 3 ' &H3%
+Global Const gc0056 = 4 ' &H4%
+Global Const gc0058 = 5 ' &H5%
+Global Const gc005A = 6 ' &H6%
+Global Const gc005C = 7 ' &H7%
+Global Const gc005E = 8 ' &H8%
+Global Const gc0060 = 9 ' &H9%
+Global Const gc0062 = 10 ' &HA%
+Global Const gc0064 = 11 ' &HB%
+Global Const gc0066 = 12 ' &HC%
+Global Const gc0068 = 13 ' &HD%
+Global Const gc006A = 14 ' &HE%
+Global Const gc006C = 15 ' &HF%
+Global Const gc006E = 15 ' &HF%
+Global gv0070(1 To 15) As Long
+Global gv0086
+Global gv008A
+Global gv008E
+Global gv0092
+Global gv0096(4 To 10) As Long
+Global gv00AC(4 To 10) As Long
+Global gv00C2(4 To 10) As Long
+Global gv00D8(4 To 10) As Long
+Global gv00EE
+Global gv00F2
+Global gv00F6
+Global gv00FA(4 To 10) As Long
+Global gv0110(4 To 10) As Long
+Global gv0126 As Integer
+Global Const gc0128 = 1 ' &H1%
+Global Const gc012A = 2 ' &H2%
+Global Const gc012E = 4 ' &H4%
+Global Const gc0130 = 5 ' &H5%
+Global Const gc0134 = 7 ' &H7%
+Global Const gc0136 = 8 ' &H8%
+Global Const gc0138 = 9 ' &H9%
+Global gv013C As Double
+Global gv0146 As Integer
+Global gv0148 As Integer
+Global gv014A(1) As Integer
+Global gv0160 As Integer
+Global gv0164(4) As Integer
+Global gv017A(3) As Integer
+Global gv019E As Double
+Global gv01A6 As Long
+Global gv01AA As Integer
+Global Const gc01AC = 1 ' &H1%
+Global gv01BE As Integer
+Global Const gc01C0 =-1 ' &HFFFF%
+Global gv01D4(2 To 12) As Long
+Global gv01EA As Long
+Global gv01EE As Long
+Global gv01F2 As Long
+Global gv01F6 As Integer
+Type T1607
+  M1612 As Integer
+  M1617 As Integer
+End Type
+
+Global gv0216(9) As T1607
+Global Const gc0232 = 3 ' &H3%
+Global Const gc0234 = 4 ' &H4%
+Global gv0240(9) As Integer
+Global gv0256 As Integer
+Global Const gc0258 = 71 ' &H47%
+Global gv025C As Integer
+Global gv025E As Integer
+Global gv0260 As Integer
+Global gv0270 As String
+Global gv0278 As Integer
+Global gv027E As Integer
+Global gv0280 As Integer
+Global gv0282 As Integer
+Global Const gc0284 = 1 ' &H1%
+Type T17F3
+  M1800 As String
+  M1808 As Integer
+  M1814 As Integer
+End Type
+
+Global gv02AE As Integer
+Global gv02E0
+Global gv02E4
+Type T19F5
+  M1A02 As Integer
+  M1A08 As Integer
+  M1A0E As Integer
+  M1A14 As Integer
+  M1A1A As String
+End Type
+
+Type T1A21
+  M1A2E As Integer
+  M1A34 As Integer
+  M1A3A As Integer
+  M1A46 As Integer
+End Type
+
+Global gv035C As Integer
+Global gv0362 As Integer
+Global gv0368
+Type T1AAC
+  M1AC1 As Integer
+  M1AC7 As Integer
+  M1AD4 As Integer
+  M1AE2 As Integer
+  M1612(99) As Integer
+  M1617(99) As Integer
+End Type
+
+Global gv03C6(1) As T1AAC
+Global gv03DC As Integer
+Global gv03E0(1) As T1607
+Global gv03F6(1) As Integer
+Global gv040C
+Global gv0422 As Integer
+Global gv0428 As Integer
+Global gv042A As Integer
+Type T1C0E
+  M1C20 As String * 30
+  M1C2F As Integer
+  M1C3F As Long
+  M1C4B As Long
+  M1C58 As Long
+  M1C61 As Long
+  M1C6B As Long
+  M1C78 As Long
+  M1C89 As Long
+  M1C96(4 To 10) As Long
+  M1CA0(4 To 10) As Long
+  M1CAE(4 To 10) As Long
+  M1CBC(4 To 10) As Long
+  M1CCE(4 To 10) As Long
+  M1CD8(4 To 10) As Long
+  M1CE5(1 To 15) As Long
+  M1CF1 As Double
+  M1CFA(1) As Integer
+  M1D03 As Integer
+  M1D10 As Double
+  M1D20 As Integer
+End Type
+
+Global gv0568(1) As Integer
+Global gv0590 As Integer
+Global gv059A(2) As Integer
+Global gv05B6(11) As Integer
