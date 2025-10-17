@@ -5,10 +5,10 @@ Dim m001A
 Dim m001E As String * 1
 Dim m0020 As Integer
 Dim m0022 As String
-Const mc002C = 12632256  ' &HC0C0C0&
-Const mc0032 = 13369376 ' ? &H 0020 00CC
-Const mc003A = 8913094 ' ? &H 00C6 0088
-Const mc003E = 6684742 ' ? &H 0046 0066
+Const mc002C = &HC0C0C0
+Const mc0032 = &HCC0020
+Const mc003A = &H8800C6
+Const mc003E = &H660046
 
 Function fn0A75 (p0046 As Long, p0048 As Long, p004A As Integer) As Long
 If gv019E < 1 Then fn0A75 = 0: Exit Function
