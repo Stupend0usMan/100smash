@@ -37,3 +37,4 @@ Sub Form_Load ()
     sub00DB Me, 299, 440
     Move (Screen.Width - Width) / 2, (Screen.Height - Height) / 3
 End Sub
+

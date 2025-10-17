@@ -6,7 +6,7 @@ S20SQCRY.FRM
 S20SQLST.FRM
 S20SQWON.FRM
 SSQBYE.FRM
-ProjWinSize=152,402,248,215
+ProjWinSize=146,285,261,268
 ProjWinShow=2
 IconForm="sqBrd"
 Title="20 Squares"

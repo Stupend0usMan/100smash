@@ -50,7 +50,7 @@ Sub Form_Activate ()
 End Sub
 
 Sub Form_KeyPress (KeyAscii As Integer)
-    If  KeyAscii = 27 Or KeyAscii = 32 Then
+    If KeyAscii = 27 Or KeyAscii = 32 Then
         sub00C6
         sub00AD
         End
@@ -77,7 +77,7 @@ On Error Resume Next
   ReDim gv0010$(100)
   l0042$ = gv0044$ & "\Mumfact2.TXT"
   Open l0042$ For Input Access Read As #1
-  If  Err <> 0 Then
+  If Err <> 0 Then
     sqBrd.MummyFacts.Checked = False
     sqBrd.MummyFacts.Enabled = False
     Exit Sub
@@ -89,14 +89,15 @@ On Error Resume Next
     gv0010$(l0040%) = l003E$
   Loop
   Close #1
-  If  l0040% < 0 Then
+  If l0040% < 0 Then
     sqBrd.MummyFacts.Checked = False
     sqBrd.MummyFacts.Enabled = False
   End If
   gv0042% = l0040% + 1
   ReDim Preserve gv0010$(gv0042% - 1)
-  If  Err <> 0 Then
+  If Err <> 0 Then
     sqBrd.MummyFacts.Checked = False
     sqBrd.MummyFacts.Enabled = False
   End If
 End Sub
+
