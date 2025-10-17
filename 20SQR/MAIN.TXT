@@ -1,0 +1,21 @@
+' main.txt - global definitions
+Global gv0006 As Integer
+Global gv0008 As Integer
+Global gv000A As String
+Global gv000E As Integer
+Global gv0010() As String
+Global gv0042 As Integer
+Global gv0044 As String
+Global gv0048 As Integer
+Global gv004A As String
+Global gv004E As Integer
+Type T065F
+  M0669 As Integer
+  M0676 As Integer
+End Type
+
+Type T0683
+  M068F As Integer
+  M0694 As Integer
+End Type
+
